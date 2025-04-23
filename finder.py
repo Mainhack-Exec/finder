@@ -26,7 +26,7 @@ HASH_SAMPLE_FILE = os.path.join(PAYLOAD_DIR, "hash_samples.txt")
 USER_AGENTS_FILE = os.path.join(PAYLOAD_DIR, "user_agents.txt")
 
 # Scanner Settings
-DEFAULT_USER_AGENT = "FastThreadedScanner/1.6" # Updated UA
+DEFAULT_USER_AGENT = "FastThreadedScanner/1.6" # Keep UA version consistent
 TIME_BASED_SLEEP_DURATION = 5 # seconds
 TIME_BASED_THRESHOLD = TIME_BASED_SLEEP_DURATION * 0.8
 REQUEST_TIMEOUT = TIME_BASED_SLEEP_DURATION + 7
@@ -41,11 +41,17 @@ FILE_LOCK = threading.Lock() # For thread-safe file writing
 # --- Core Functions ---
 
 def safe_log(msg):
-    """Thread-safe logging function."""
+    """Thread-safe logging function with timestamp."""
     with LOG_LOCK:
-        # Get current timestamp for log entries
-        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        # Use current time from context if available, otherwise use system time
+        try:
+            # This part relies on the context block providing current time
+            # As a fallback, we'll use system time if context isn't directly usable here.
+             timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        except NameError: # Fallback if context isn't magically available
+             timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print(f"[{timestamp}] {msg}")
+
 
 def make_request(url, headers=None):
     """
@@ -365,23 +371,23 @@ def prepare_payload_files():
 
 def scan_single_target(base_url, sqli_params_list, xss_params_list, target_index, total_targets):
     """Runs all scans for a single target URL."""
-    # Optional: Log start only if needed, can be noisy with many threads
-    # safe_log(f"[*] Scanning Target {target_index}/{total_targets}: {base_url}")
+    # This function encapsulates the work done by each thread.
+    # It calls the individual test functions which handle their own logging/saving.
+    try:
+        test_lfi_payloads(base_url)
 
-    # Run tests for the current target URL
-    test_lfi_payloads(base_url)
+        if sqli_params_list:
+            for param in sqli_params_list:
+                test_sql_payloads(base_url, param)
 
-    if sqli_params_list:
-        for param in sqli_params_list:
-            test_sql_payloads(base_url, param)
-
-    if xss_params_list:
-        for param in xss_params_list:
-             test_xss_payloads(base_url, param)
-
-    # Optional: Log finish only if needed
-    # safe_log(f"[*] Finished scanning Target {target_index}/{total_targets}: {base_url}")
-    return True # Indicate success (or return specific results if needed later)
+        if xss_params_list:
+            for param in xss_params_list:
+                 test_xss_payloads(base_url, param)
+        return True # Indicate success
+    except Exception as e:
+        # Log any unexpected error within the target scanning process
+        safe_log(f"[!] EXCEPTION during scan for Target {target_index}/{total_targets} ({base_url}): {e}")
+        return False # Indicate failure
 
 
 # --- Main Execution ---
@@ -446,6 +452,7 @@ def run_tests():
             scan_url = base_url_from_file.strip()
             original_input_url = scan_url
 
+            # Auto-prefix with http:// if scheme is missing
             if '://' not in scan_url:
                 safe_log(f"[*] URL '{original_input_url}' missing scheme, prepending 'http://'.")
                 scan_url = f"http://{original_input_url}"
@@ -462,16 +469,13 @@ def run_tests():
 
         safe_log(f"[*] Submitted {tasks_submitted} scan tasks. Waiting for completion...")
         processed_count = 0
-        # Wait for results using as_completed for better progress/error handling
+        # Wait for results using as_completed
         for future in concurrent.futures.as_completed(futures):
             processed_count += 1
-            # Optional: Progress update every N tasks or percentage
-            # if processed_count % max(1, tasks_submitted // 10) == 0 or processed_count == tasks_submitted:
-            #    safe_log(f"[*] Progress: {processed_count}/{tasks_submitted} targets completed...")
             try:
                 result = future.result() # Check for exceptions from thread
             except Exception as exc:
-                # Log exception, but don't stop processing other results
+                # Log exception from thread, continue processing others
                 safe_log(f'[!] THREAD EXCEPTION: An error occurred during scan: {exc}')
 
     scan_duration = time.time() - start_scan_exec_time
@@ -491,6 +495,7 @@ def run_tests():
     found_any = False
     for vuln_type, fpath in output_files_found.items():
         try:
+            # Check if file exists and is not empty
             if os.path.exists(fpath) and os.path.getsize(fpath) > 0:
                 safe_log(f"[!] Check '{fpath}' for potential {vuln_type} findings.")
                 found_any = True
