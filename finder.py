@@ -26,7 +26,7 @@ HASH_SAMPLE_FILE = os.path.join(PAYLOAD_DIR, "hash_samples.txt")
 USER_AGENTS_FILE = os.path.join(PAYLOAD_DIR, "user_agents.txt")
 
 # Scanner Settings
-DEFAULT_USER_AGENT = "FastThreadedScanner/1.6" # Keep UA version consistent
+DEFAULT_USER_AGENT = "FastThreadedScanner/1.7" # Updated UA
 TIME_BASED_SLEEP_DURATION = 5 # seconds
 TIME_BASED_THRESHOLD = TIME_BASED_SLEEP_DURATION * 0.8
 REQUEST_TIMEOUT = TIME_BASED_SLEEP_DURATION + 7
@@ -43,13 +43,8 @@ FILE_LOCK = threading.Lock() # For thread-safe file writing
 def safe_log(msg):
     """Thread-safe logging function with timestamp."""
     with LOG_LOCK:
-        # Use current time from context if available, otherwise use system time
-        try:
-            # This part relies on the context block providing current time
-            # As a fallback, we'll use system time if context isn't directly usable here.
-             timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        except NameError: # Fallback if context isn't magically available
-             timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        # Get current timestamp for log entries
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print(f"[{timestamp}] {msg}")
 
 
@@ -371,8 +366,6 @@ def prepare_payload_files():
 
 def scan_single_target(base_url, sqli_params_list, xss_params_list, target_index, total_targets):
     """Runs all scans for a single target URL."""
-    # This function encapsulates the work done by each thread.
-    # It calls the individual test functions which handle their own logging/saving.
     try:
         test_lfi_payloads(base_url)
 
@@ -385,7 +378,6 @@ def scan_single_target(base_url, sqli_params_list, xss_params_list, target_index
                  test_xss_payloads(base_url, param)
         return True # Indicate success
     except Exception as e:
-        # Log any unexpected error within the target scanning process
         safe_log(f"[!] EXCEPTION during scan for Target {target_index}/{total_targets} ({base_url}): {e}")
         return False # Indicate failure
 
@@ -456,6 +448,9 @@ def run_tests():
             if '://' not in scan_url:
                 safe_log(f"[*] URL '{original_input_url}' missing scheme, prepending 'http://'.")
                 scan_url = f"http://{original_input_url}"
+                # ---- DEBUG LINE ADDED HERE ----
+                safe_log(f"[*] DEBUG: Submitting URL for scan: {scan_url}")
+                # ---- END DEBUG LINE ----
             elif not (scan_url.startswith('http://') or scan_url.startswith('https://')):
                  safe_log(f"[!] Skipping unsupported scheme in URL: {scan_url}")
                  continue # Skip this URL
@@ -475,7 +470,6 @@ def run_tests():
             try:
                 result = future.result() # Check for exceptions from thread
             except Exception as exc:
-                # Log exception from thread, continue processing others
                 safe_log(f'[!] THREAD EXCEPTION: An error occurred during scan: {exc}')
 
     scan_duration = time.time() - start_scan_exec_time
@@ -495,7 +489,6 @@ def run_tests():
     found_any = False
     for vuln_type, fpath in output_files_found.items():
         try:
-            # Check if file exists and is not empty
             if os.path.exists(fpath) and os.path.getsize(fpath) > 0:
                 safe_log(f"[!] Check '{fpath}' for potential {vuln_type} findings.")
                 found_any = True
